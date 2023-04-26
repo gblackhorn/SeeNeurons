@@ -42,7 +42,7 @@ function [neuronsList,varargout] = SeeNeurons(binaryMatrix,varargin)
 
 
 	% 3. Filter neurons in the list 
-	neuronsList = [stats.EquivDiameter] >= minDiameter & [stats.EquivDiameter] <= maxDiameter & [stats.Circularity] >= minCircularity & [stats.Area] <= maxDiameter;
+	neuronsList = [stats.EquivDiameter] >= minDiameter & [stats.EquivDiameter] <= maxDiameter & [stats.Circularity] >= minCircularity & [stats.Area] >= minArea;
 
 
 	% 4. Calculate the mean, standard error, median, and normality for summary
